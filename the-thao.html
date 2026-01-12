@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CLB Thể Thao - THPT Nguyễn Đình Chiểu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #a70b47; --navy: #000080; }
+        body { font-family: 'Be Vietnam Pro', sans-serif; margin: 0; line-height: 1.6; background: #f4f4f4; }
+        
+        .hero { 
+            height: 40vh; 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('485310713_631895629762562_8115618031289016407_n.jpg') no-repeat center center;
+            background-size: cover; display: flex; align-items: center; justify-content: center; color: white; text-align: center;
+        }
+
+        .container { max-width: 900px; margin: -50px auto 50px; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; }
+        
+        h1 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin: 0; }
+        h2 { color: var(--primary); border-left: 5px solid var(--primary); padding-left: 15px; margin-top: 30px; }
+        
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--navy); text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .btn-back:hover { color: var(--primary); }
+
+        .activity-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; margin-bottom: 30px; }
+        .item { background: #fff5f8; padding: 15px; border-radius: 10px; border-bottom: 3px solid var(--primary); }
+
+        .image-wrapper {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .club-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 3px solid #eee;
+        }
+
+        @media (max-width: 600px) {
+            .activity-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>CLB THỂ THAO</h1>
+    </section>
+
+    <div class="container">
+        <a href="index.html" class="btn-back">← Quay lại trang chủ</a>
+        
+        <p>CLB Thể thao trường THPT Nguyễn Đình Chiểu là nơi hội tụ của những tâm hồn năng động, yêu thích vận động và khát khao chinh phục các giải đấu.</p>
+        
+        <h2>Mục tiêu</h2>
+        <p>Rèn luyện sức khỏe, nâng cao kỹ năng chuyên môn và xây dựng tinh thần đồng đội thông qua các bộ môn thể thao đa dạng.</p>
+
+        <h2>Các bộ môn chính</h2>
+        <div class="activity-list">
+            <div class="item"><b>Bóng đá:</b> Rèn luyện thể chất và tinh thần đồng đội.</div>
+            <div class="item"><b>Cầu lông:</b> Giao lưu kỹ thuật và phản xạ.</div>
+            <div class="item"><b>Bóng chuyền:</b> Rèn luyện sự phối hợp nhịp nhàng.</div>
+            <div class="item"><b>Điền kinh:</b> Bền bỉ, quyết tâm vượt qua giới hạn bản thân.</div>
+        </div>
+
+        <h2>Hình ảnh hoạt động</h2>
+        <div class="image-wrapper">
+            <img src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/598241630_853393367612786_5353252466695893927_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHOR-DEv-6vS0r9vQ1iXCaWBcq8QteFJzAFyrxC14UnMCBagM2AdIatghvyDsXbCMdxX1RHswCQH2yTB-8JSuRM&_nc_ohc=DJj91qFspykQ7kNvwGRlzG_&_nc_oc=Adljf6PkVhZZfKh5BT-xIKNqC4WJMtjsU0wQkBowTgH-lHCWlWmSWf2bVSGu5WDewZGx0tkwnpFnUBbdP7ctCNMq&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=y1YssoRQ6rQsQsW9rIe66g&oh=00_AfpYphXGmLoYDf4d3ziJWuhF2WxbI0s1oosnz1_rlLt_AQ&oe=6969A41C" 
+                 alt="Hoạt động CLB Thể Thao" 
+                 class="club-img">
+        </div>
+    </div>
+</body>
+</html>
