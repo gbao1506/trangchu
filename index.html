@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Câu lạc bộ THPT Nguyễn Đình Chiểu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-red: #a70b47;
+            --dark-red: #8b0000;
+            --navy: #000080;
+            --success-green: #09922c;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .header-banner {
+            position: relative;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background: url('https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/487499095_1153504983453520_693107497415881939_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFY5ZsQr2pAZRpfm7JLpldFl0gS1KN0igCXSBLUo3SKAN9-Kn7XChEK2449aWE64zbXsLOMh7i61OIC0-gcHe5a&_nc_ohc=blHo5MNxDIYQ7kNvwFuXAT7&_nc_oc=Adk6rn-CT_EwJq0gIVI8Q_eu-dbGhZUZksrIjHgVZbHNHfl3XSJmGq8a80akg5R0Wh126gwiXZ2Npc4aN-l_1P2F&_nc_zt=23&_nc_ht=scontent.fsgn2-3.fna&_nc_gid=edsm6x2btrAfscof7dx3ag&oh=00_AfpO2DdtdrJpW1kn7AaPq6wjbU7rm75Xi_PyaaoQ5tc6gg&oe=696995A7') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            max-width: 1000px;
+        }
+
+        .header-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .slogan-bar {
+            background-color: var(--success-green);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: space-around;
+        }
+
+        .slogan-box {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .slogan-box h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .welcome-title {
+            text-align: center;
+            color: var(--navy);
+            margin-bottom: 3rem;
+        }
+
+        .welcome-title b { font-size: 2rem; display: block; margin-bottom: 10px; }
+
+        .club-card {
+            display: flex;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+            transition: var(--transition);
+        }
+
+        .club-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+        }
+
+        .club-card.reverse { flex-direction: row-reverse; }
+
+        .club-image {
+            flex: 1;
+            min-height: 300px;
+        }
+
+        .club-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .club-info {
+            flex: 1;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .club-info h3 {
+            color: var(--navy);
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        .footer {
+            background-color: var(--dark-red);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .footer a {
+            color: #ffcccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer a:hover { color: white; text-decoration: underline; }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .club-card, .club-card.reverse { flex-direction: column; }
+            .header-content h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-banner">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>CÁC CÂU LẠC BỘ TRƯỜNG THPT NGUYỄN ĐÌNH CHIỂU</h1>
+        </div>
+    </header>
+
+    <section class="slogan-bar">
+        <div class="row">
+            <div class="slogan-box">
+                <h2>Năng động</h2>
+                <p>Chỉ có năng động mới tạo ra kết quả</p>
+            </div>
+            <div class="slogan-box">
+                <h2>Nhiệt huyết</h2>
+                <p>Bừng nhiệt huyết, cháy đam mê</p>
+            </div>
+            <div class="slogan-box">
+                <h2>Đoàn kết</h2>
+                <p>Đoàn kết là sức mạnh, tự tin là chiến thắng</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="welcome-title">
+            <b>Chào Mừng Các Bạn</b>
+            <p>Bạn muốn bung hết sức với những hoạt động bạn yêu thích? Nơi này sẽ phù hợp với bạn.</p>
+        </div>
+
+        <div class="club-card">
+            <div class="club-image">
+                <img src="https://scontent.fsgn2-10.fna.fbcdn.net/v/t39.30808-6/318014747_106693225616141_5616196227184456303_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFs-QCVfGoIjuLo_krDRTdnqm-rSuLcrOqqb6tK4tys6uHqZz_TEDXrB1u4nheiQHLj9GAWIdxngr0JhrlBzQ-S&_nc_ohc=ZJGcIhVnm1QQ7kNvwGPk16O&_nc_oc=Adk_fm1BIwHcvXQhYr_wld7KRtOaHMaRYMOFjghKXp033SNhLjWrZzpZ_LU9vRH2BoJcLGLOf650VKErA0zIC0Ch&_nc_zt=23&_nc_ht=scontent.fsgn2-10.fna&_nc_gid=u8hENxT9NCLjFS08Ih0HAQ&oh=00_Afp7PA-0dWODGe6v74YdiQtRPaiOrAuhV2W6vkE5hk7clg&oe=69698F2D" alt="CLB Thể Thao">
+            </div>
+            <div class="club-info">
+                <h3>CLB Thể Thao</h3>
+                <p>Bóng đá, Cầu lông, Bóng chuyền,... Nơi rèn luyện thể chất và tinh thần đồng đội.</p>
+                <p>LÀM HẾT SỨC — CHƠI HẾT MÌNH</p>
+                <p>“THE HEALTHY EQUAL BEAUTIFUL”</p>
+                <a href="the-thao.html">Xem thêm</a>
+            </div>
+        </div>
+
+        <div class="club-card reverse">
+            <div class="club-image">
+                <img src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/475244681_1102506635220022_2460853902859476781_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeE32JP7LemggNtIlBKWSM2Rqdqp8q6zwsOp2qnyrrPCw-Re-fWqOVoKnnt6hS85KbowzZi7FY442_MHzJaD50Yx&_nc_ohc=PB_jxWnlSAAQ7kNvwHJUJp7&_nc_oc=AdlVKJWNC22vkvvN9qk3s2EIjbY5FU_QcxZkP5ypVBt4XgNFesIkbFpx1aAzW_voYs7ZcQJ_rV92OJAymrm-vP2J&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=fqWt1XcmqVV-0TukKLYoeQ&oh=00_Afq1791g4OVsErDuEnZvaafqwA_SSgXNd7vfujkP6QGpCg&oe=696987E2" alt="CLB Truyền Thông">
+            </div>
+            <div class="club-info">
+                <h3>CLB Truyền Thông</h3>
+                <p>NDC Social Media là cầu nối thông tin giữa nhà trường và học sinh và là nơi để các bạn học sinh thỏa sức sáng tạo nội dung, nghiên cứu, tìm tòi, học hỏi trên lĩnh vực Truyền Thông - Thông Tin.</p>
+                <a href="truyen-thong.html">Xem thêm</a>
+            </div>
+        </div>
+
+        <div class="club-card">
+            <div class="club-image">
+                <img src="https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-6/475507860_1015755800578585_3992955309509331014_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEjnhFcJ8ljiCRBi8LuBru8A_IkCo9O02oD8iQKj07TaoVV2Ky_yeUgLI4rjNDI-nnKqu6R0IYpQh6ANZqInxGY&_nc_ohc=z_p1EmsjRrYQ7kNvwEst3AP&_nc_oc=Adkj1dGTcW0_20sTjO-y29yjwX3Qmeomwv4DwRKcr6qWi8UXBalldYTuybjB6QcZ5Xi-c6xctK4Fc0MyxFM6WxGk&_nc_zt=23&_nc_ht=scontent.fsgn2-9.fna&_nc_gid=go5KUzd0Oi5rnX1dBanlcQ&oh=00_Afr9jltk4V8U8k7-m0IEcqcAZ5EY9CD9fZDKdvJE8NQ55A&oe=6969AB65" alt="CLB Thiện Nguyện">
+            </div>
+            <div class="club-info">
+                <h3>CLB Thiện Nguyện</h3>
+                <p>Cho đi, sẻ chia, kết nối, lan tỏa yêu thương và cống hiến sức trẻ cho cộng đồng.</p>
+                <a href="thien-nguyen.html">Xem thêm</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3>Liên hệ:</h3>
+                <p>📞 SĐT: 02753822568</p>
+                <p>🌐 Website: <a href="https://thptndc.edu.vn/">THPT Nguyễn Đình Chiểu</a></p>
+            </div>
+            <div>
+                <h3>Khám phá thêm:</h3>
+                 <ul>
+                    <li> <a href="https://www.facebook.com/share/1JvWXsnrjJ/">CLB Thể Thao</a></li>
+                    <li> <a href="https://www.facebook.com/share/1SN7RuSovE/">CLB Truyền Thông</a></li>
+                    <li> <a href="https://www.facebook.com/share/17zFSaPiWr/">CLB Thiện Nguyện</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
